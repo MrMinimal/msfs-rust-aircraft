@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetPackage Version="0.1.0">
+	<ItemSettings>
+		<ContentType>AIRCRAFT</ContentType>
+		<Title>Gauge Aircraft</Title>
+		<Manufacturer>My Manufacturer</Manufacturer>
+		<Creator>My Company</Creator>
+	</ItemSettings>
+	<Flags>
+		<VisibleInStore>true</VisibleInStore>
+		<CanBeReferenced>true</CanBeReferenced>
+	</Flags>
+	<MarketplaceData>
+		<AssetDir>PackageDefinitions\mycompany-aircraft-wasm-gauge\MarketplaceData\</AssetDir>
+		<OutputDir>MarketplaceData\mycompany-aircraft-wasm-gauge\</OutputDir>
+	</MarketplaceData>
+	<AssetGroups>
+		<AssetGroup Name="ContentInfo">
+			<Type>Copy</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageDefinitions\mycompany-aircraft-wasm-gauge\ContentInfo\</AssetDir>
+			<OutputDir>ContentInfo\mycompany-aircraft-wasm-gauge\</OutputDir>
+		</AssetGroup>
+		<AssetGroup Name="MyCompany_Gauge_Aircraft">
+			<Type>SimObject</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\SimObjects\Airplanes\MyCompany_Gauge_Aircraft\</AssetDir>
+			<OutputDir>SimObjects\Airplanes\MyCompany_Gauge_Aircraft\</OutputDir>
+		</AssetGroup>
+		<AssetGroup Name="MyCompany_Gauge_Aircraft_Data">
+			<Type>Copy</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\Data\</AssetDir>
+			<OutputDir>Data\</OutputDir>
+		</AssetGroup>
+	</AssetGroups>
+</AssetPackage>
+

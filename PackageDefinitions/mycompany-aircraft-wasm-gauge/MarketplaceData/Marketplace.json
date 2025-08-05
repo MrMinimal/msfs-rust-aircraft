@@ -1,0 +1,15 @@
+{
+  "market-data": {
+    "Neutral": {
+      "creator": "My Company",
+      "title": "Gauge Aircraft",
+      "description": "Sample aircraft demonstrating a simple wasm gauge",
+      "support-contact": "devsupport.flightsimulator.com",
+      "tags": "WASM",
+      "media-backgrounds": [
+        "thumbnail3840x2160.jpg,thumbnail3840x2160.jpg"
+      ],
+      "blocks": []
+    }
+  }
+}
