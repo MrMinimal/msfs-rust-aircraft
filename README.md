@@ -13,7 +13,7 @@ Because I didn't want to write logic in Microsoft's cursed RPN language, XML or 
 
 ### Compile the Rust logic
 1. `cd Sources/Rust`
-1. `cargo build -v --target wasm32-wasip1 --release && wasm-opt -O1 --signext-lowering --enable-bulk-memory -o ../../../../../Packages/mycompany-aircraft-wasm-gauge/SimObjects/Airplanes/MyCompany_Gauge_Aircraft/panel/nvg_demo.wasm target/wasm32-wasip1/release/nvg_demo.wasm`
+1. `cargo build -v --target wasm32-wasip1 --release && wasm-opt -O1 --signext-lowering --enable-bulk-memory -o ../../Packages/mycompany-aircraft-wasm-gauge/SimObjects/Airplanes/MyCompany_Gauge_Aircraft/panel/gauge_logic.wasm target/wasm32-wasip1/release/gauge_logic.wasm`
 
 ### Open project in MSFS
 1. Enable MSFS developer mode
