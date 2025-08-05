@@ -4,6 +4,9 @@ Microsofts MSFS SDK Sample GaugeAircraft in Rust 🦀
 
 Because I didn't want to write logic in Microsoft's cursed RPN language, XML or C++.
 
+<img width="1941" height="904" alt="grafik" src="https://github.com/user-attachments/assets/ab2a756d-62a4-4fae-a4ff-a3b64ea3c1d0" />
+
+
 # Requirements
 1. Git for Windows (with Git Bash)
 1. Rust
