@@ -1,4 +1,8 @@
-use msfs::{nvg, MSFSEvent};
+use msfs::{
+    legacy::{AircraftVariable, NamedVariable},
+    MSFSEvent,
+    nvg,
+};
 
 #[msfs::gauge(name=Demo)]
 async fn demo(mut gauge: msfs::Gauge) -> Result<(), Box<dyn std::error::Error>> {
@@ -21,7 +25,15 @@ async fn demo(mut gauge: msfs::Gauge) -> Result<(), Box<dyn std::error::Error>> 
                 });
             }
             MSFSEvent::PreUpdate => {
-                println!("Hello rusty world!");
+                let delta_time: f64 =
+                    AircraftVariable::from("ANIMATION DELTA TIME", "Number", 0)?.get::<f64>();
+                let fps = 1.0 / delta_time;
+                println!("FPS: {}", fps);
+
+                let custom_variable = NamedVariable::from("YOUR_CUSTOM_NAME");
+                println!("My custom variable was: {}", custom_variable.get_value::<f64>());
+                custom_variable.set_value(custom_variable.get_value::<f64>() + 0.1);
+                println!("My custom variable is now: {}", custom_variable.get_value::<f64>());
             }
             _ => {
                 //dbg!("{}", event);
