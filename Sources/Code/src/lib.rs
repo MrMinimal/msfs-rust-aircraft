@@ -12,7 +12,10 @@ async fn demo(mut gauge: msfs::Gauge) -> Result<(), Box<dyn std::error::Error>> 
 
     while let Some(event) = gauge.next_event().await {
         match event {
-            MSFSEvent::PreDraw(d) => {
+            MSFSEvent::PreDraw(draw_data) => {
+                let delta_time = draw_data.dt;
+                let time_elapsed = draw_data.t;
+                
                 nvg.draw_frame(d.width(), d.height(), |f| {
                     // draw square
                     f.draw_path(&red, |p| {
@@ -23,12 +26,6 @@ async fn demo(mut gauge: msfs::Gauge) -> Result<(), Box<dyn std::error::Error>> 
 
                     Ok(())
                 });
-            }
-            MSFSEvent::PreUpdate => {
-                let delta_time: f64 =
-                    AircraftVariable::from("ANIMATION DELTA TIME", "Number", 0)?.get::<f64>();
-                let fps = 1.0 / delta_time;
-                println!("FPS: {}", fps);
 
                 let custom_variable = NamedVariable::from("YOUR_CUSTOM_NAME");
                 println!("My custom variable was: {}", custom_variable.get_value::<f64>());
